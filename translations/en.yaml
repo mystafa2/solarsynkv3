@@ -1,0 +1,31 @@
+configuration:
+  sunsynk_user:
+    name: Sunsynk Username
+    description: Enter the username that you use to login to the sunsynk.net portal.
+  sunsynk_pass:
+    name: Sunsynk Password
+    description: Enter the password that you use to login to the sunsynk.net portal.   
+  sunsynk_serial:
+    name: Sunsynk Inverter Serial Number
+    description: You can find your inverter serial number under menu "Equipment" -> "Inverter" in the synsynk portal. You can enter multiple serials by seperating them with a semi colon. Example Serial1;Serial2
+  Home_Assistant_IP:
+    name: Homeassistant Hostname or IP Address
+    description: Homeassistant ip or hostname. Please do not use a loopback address such as localhost, 127.0.0.1. And do not prefix the address with http:// or https://
+  Home_Assistant_PORT:
+    name: Homeassistant server port number.
+    description: In most cases the port number is 8123. Leave the default as is if you did not change this.  
+  HA_LongLiveToken:
+    name: Homeassistant Long Live Token
+    description: Generate a long live token from the Homeassistant web-ui in the menu "Your Profile" -> Scroll to the bottom and click "CREATE TOKEN"
+  Refresh_rate:
+    name: Script Refresh Rate
+    description: This script will attempt to fetch inverter data based on this interval in seconds. Its advisable to enter the same refresh rate that you have set in the sunsynk portal under menu. "Equipment" -> "Gateway" -> "Settings"
+  Enable_HTTPS:
+    name: Enable HTTPS
+    description: If your Homeassistant server was setup to use HTTPS then you need to trun this setting on.
+  API_Server:
+    name: API Endpoint
+    description: Select the apropriate API server. Use api.sunsynk.net for SunSynk based inverters or pv.inteless.com for generic Elinter based inverters.
+  use_internal_api:
+    name: Use HomeAssistant Supervisor API
+    description: Use the HomeAssistant Supervisor API to communicate with HomeAssistant. If this is set, the Home Assistant IP, port, token and http/https settings are ignored. Only turn this off if you have problems, or if you are running SolarSynk on a different HomeAssistant instance to the one you want to send the data to.
